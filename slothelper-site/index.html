@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slothelper</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reel-wrapper {
+      position: relative;
+      width: 300px;
+      height: 100px;
+      overflow: hidden;
+      margin: 0 auto;
+      background: #111;
+      border: 10px solid #ffd700;
+      box-shadow: 0 0 20px #ffd700;
+    }
+
+    #reel {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      height: 100%;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    #reel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tile {
+      width: 100px;
+      height: 80px;
+      margin: 0 5px;
+      background: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #000;
+      flex-shrink: 0;
+    }
+
+    #selector {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid red;
+      z-index: 2;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #ffd700;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #spinButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ffd700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px auto 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎰 Slothelper</h1>
+  </header>
+
+  <main>
+    <section class="game-container">
+      <div class="game-box" id="slot-wheel">
+        <h2>🎡 Slot Reel</h2>
+        <div class="reel-wrapper">
+          <div id="selector"></div>
+          <div id="reel"></div>
+        </div>
+        <button id="spinButton">Spin</button>
+        <div id="result">Spin to get your next game!</div>
+      </div>
+
+      <div class="game-box" id="dice-roll">
+        <h2>🎲 Dice Roll</h2>
+      </div>
+
+      <div class="game-box" id="coin-flip">
+        <h2>🪙 Coin Flip</h2>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
