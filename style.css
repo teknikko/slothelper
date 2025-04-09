@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 0 10px #000;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .game-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000;
+    width: 300px;
+    min-height: 200px;
+  }
+  
+  .game-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+  
+  /* Uudistettu pyörä */
+  #wheel {
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #ffd700;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px #ffd700;
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+  .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+    background-color: #222;
+    border-right: 1px solid #555;
+    border-bottom: 1px solid #555;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  }
+  
+  .segment-text {
+    display: block;
+    transform-origin: 0 0;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  #pointer {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid red;
+    margin: 10px auto;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffd700;
+    font-weight: bold;
+  }
+  
